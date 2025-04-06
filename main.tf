@@ -11,6 +11,11 @@ resource "aws_instance" "web-server" {
 }
 
 
+output "web_server_public_ip" {
+  value = aws_instance.web-server.public_ip
+}
+
+
 /*data "aws_ami" "this"{
      owners = "amazon"
      most_recent = true
